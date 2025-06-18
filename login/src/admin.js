@@ -4,14 +4,14 @@ const emailsAutorizados = ["gustavogomes2001907@gmail.com", "admin2@seudominio.c
 firebase.auth().onAuthStateChanged((user) => {
   if (!user || !emailsAutorizados.includes(user.email)) {
     // Redireciona se não for autorizado
-    window.location.href = "../login/login.html";
+    window.location.href = "/ADMIN---Jana/login/login.html";
   }
 });
 
 // Função de Logout
 function logout() {
   firebase.auth().signOut().then(() => {
-      window.location.href = "/admin/manage/manage.html"; // Redireciona para a página de login
+      window.location.href = "/ADMIN---Jana/manage/manage.html"; // Redireciona para a página de login
   }).catch((error) => {
       console.error("Erro ao fazer logout: ", error);
   });
@@ -29,7 +29,7 @@ document.body.appendChild(logoutButton);
 firebase.auth().onAuthStateChanged((user) => {
   if (!user) {
       // Se o usuário não estiver autenticado, redireciona para a tela de login
-      window.location.href = "./index.html";
+      window.location.href = "/ADMIN---Jana/index.html";
   }
 });
 

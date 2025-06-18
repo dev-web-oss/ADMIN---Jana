@@ -30,7 +30,7 @@ const firebaseConfig = {
   
         if (emailsAutorizados.includes(user.email)) {
           // Redireciona para o painel
-          window.location.href = "../../manage/manage.html";
+          window.location.href = "/ADMIN---Jana/manage/manage.html";
         } else {
           auth.signOut();
           erroMensagem.textContent = "Este email não está autorizado.";
