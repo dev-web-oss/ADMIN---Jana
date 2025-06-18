@@ -1,16 +1,5 @@
-import { auth } from "./firebaseConfig.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-
-const emailsAutorizados = [ "janad@gmail.com", "gustavdo@gmail.com"];
-
 document.addEventListener("DOMContentLoaded", () => {
-  onAuthStateChanged(auth, user => {
-    if (!user || emailsAutorizados.includes(user.email)) {
-      window.location.href = "../index.html";
-    } else {
       initApp();
-    }
-  });
 });
 
 function initApp() {
