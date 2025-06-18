@@ -1,7 +1,7 @@
 import { auth } from "./firebaseConfig.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
-const emailsAutorizados = [ "jana@gmail.com", "gustavo@gmail.com"];
+const emailsAutorizados = [ "janad@gmail.com", "gustavdo@gmail.com"];
 
 document.addEventListener("DOMContentLoaded", () => {
   onAuthStateChanged(auth, user => {
